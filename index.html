@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Virgin Valley — Coming Soon</title>
+  <meta name="description" content="Virgin Valley View is coming soon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sky-top: #f6d9b8;
+      --sky-bottom: #fbeee0;
+      --far: #c9a98f;
+      --mid: #8f6e5a;
+      --near: #4d3a30;
+      --text: #2e221c;
+      --muted: #6b574b;
+      --accent: #b5643c;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --sky-top: #141a2b;
+        --sky-bottom: #2b2a3d;
+        --far: #3d3a52;
+        --mid: #2a2839;
+        --near: #17161f;
+        --text: #f3ece6;
+        --muted: #b9adb0;
+        --accent: #e59a6c;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { height: 100%; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: "Inter", system-ui, sans-serif;
+      color: var(--text);
+      background: linear-gradient(to bottom, var(--sky-top), var(--sky-bottom));
+      overflow-x: hidden;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px 16px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(3rem, 11vw, 7rem);
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+    }
+
+    .banner {
+      margin-top: 1.75rem;
+      display: inline-block;
+      padding: 0.7rem 1.75rem;
+      border: 1px solid var(--accent);
+      border-radius: 999px;
+      font-size: clamp(0.85rem, 2.5vw, 1rem);
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .tagline {
+      margin-top: 1.25rem;
+      max-width: 32rem;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .landscape {
+      display: block;
+      width: 100%;
+      height: clamp(160px, 32vh, 320px);
+      margin-top: 48px;
+    }
+
+    footer {
+      background: var(--near);
+      color: #e9ddd4;
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 0 16px 20px;
+      margin-top: -1px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Welcome to</p>
+    <h1>Virgin Valley</h1>
+    <span class="banner">Coming Soon</span>
+    <p class="tagline">Something new is taking shape. Check back shortly.</p>
+  </main>
+
+  <svg class="landscape" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="var(--far)" d="M0,190 L120,140 L240,170 L380,95 L520,150 L640,110 L780,165 L920,90 L1060,145 L1200,105 L1320,150 L1440,120 L1440,320 L0,320 Z"/>
+    <path fill="var(--mid)" d="M0,240 L160,190 L300,225 L460,170 L620,230 L760,195 L900,240 L1060,185 L1220,230 L1340,200 L1440,225 L1440,320 L0,320 Z"/>
+    <path fill="var(--near)" d="M0,290 C240,250 480,300 720,275 C960,250 1200,300 1440,270 L1440,320 L0,320 Z"/>
+  </svg>
+
+  <footer>&copy; <span id="year"></span> Virgin Valley</footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
